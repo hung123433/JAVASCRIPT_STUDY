@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>LESSON 8 EXCERCISES</title>
+</head>
+
+<body>
+  <script>
+    const basketball = {
+      name: 'basketball',
+      price: 1000
+    };
+    console.log(basketball);
+    /*
+    basketball.price += 500;
+    console.log(basketball);
+
+    basketball['delivery-time'] = '3 day';
+    console.log(basketball);
+    */
+    const football = {
+      name: 'football',
+      price: 1900
+    };
+    const football1 = {
+      name: 'football',
+      price: 1900
+    };
+    const shirt = {
+      name: 'T shirt',
+      price: 3000
+    };
+
+    function comparePrice(product1, product2) {
+      if (product1.price < product2.price) {
+        console.log(product1);
+      } else if (product1.price > product2.price) {
+        console.log(product2);
+      } else {
+        console.log(product1);
+      }
+    }
+    comparePrice(basketball, football);
+
+    function isSameProduct(product1, product2) {
+      if (product1.name === product2.name && product1.price === product2.price) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    console.log(isSameProduct(football, football1));
+    //chuyen chuoi thanh chuoi thuong
+    //<Ten bien>.toLowerCase();
+    let chuoiGoc = 'NGUYEN van Hung';
+    console.log(chuoiGoc.toLowerCase());
+    //Ham lap lai chuoi nhieu lan
+    //<Ten bien>.repeat(So lan lap lai);
+
+    let string1 = 'test';
+    console.log(string1.repeat(2));
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>LESSON_6_EXERCISES</title>
+</head>
+
+
+<body>
+  <button onclick="
+    playGame('heads');
+  ">Heads</button>
+
+  <button onclick="
+    playGame('tails');
+  ">Tails</button>
+  <script>
+    let score = JSON.parse(localStorage.getItem('score')) || {
+      wins: 0,
+      lose: 0
+    };
+
+    function playGame(guess) {
+      const randomNumber = Math.random();
+      let result = '';
+      if (randomNumber < 0.5) {
+        result = 'heads';
+      } else if (randomNumber > 0.5) {
+        result = 'tails';
+      }
+
+      if (result === guess) {
+        console.log('You wins.');
+        score.wins += 1;
+        console.log(`Win: ${score.wins}, Lose: ${score.lose}`);
+      } else {
+        console.log('You lose.');
+        score.lose += 1;
+        console.log(`Win: ${score.wins}, Lose: ${score.lose}`);
+      }
+
+      localStorage.setItem('score', JSON.stringify(score));
+    }
+  </script>
+</body>
+
+</html>
