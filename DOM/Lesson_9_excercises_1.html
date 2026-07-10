@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>LESSON 9 EXCERCIES</title>
+</head>
+
+<body>
+  <button>9a</button>
+  <button class="js-button">9b</button>
+
+  <p>
+    <button onclick="
+       playGame('heads');
+    ">Heads</button>
+    <button onclick="
+      playGame('tails');
+    ">Tails</button>
+  </p>
+  <p class="js-display"></p>
+
+  <p>
+    <input class="js-input-name" onkeydown="handleKeyDownName(event)">
+    <button onclick="
+      inputName();
+    ">Submit</button>
+  </p>
+  <p class="js-hide"></p>
+</body>
+<script>
+  console.log(document.querySelector('button'));
+
+  document.querySelector('.js-button')
+    .innerHTML = '9b done';
+  console.log(document.querySelector('.js-button'));
+
+  function playGame(value) {
+    let result = '';
+    if (value === 'heads')
+      result = 'You chose: heads';
+    else if (value === 'tails')
+      result = 'You chose: tails';
+
+    document.querySelector('.js-display').innerHTML = result;
+  }
+
+  function inputName() {
+    const inputYouName = document.querySelector('.js-input-name');
+    let youName = inputYouName.value;
+    document.querySelector('.js-hide')
+      .innerHTML = `You name is: ${youName}`;
+  }
+
+  function handleKeyDownName(event) {
+    if (event.key === 'Enter')
+      inputName();
+  }
+
+</script>
+
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>LESSON 9 EXERCISE 2</title>
+</head>
+
+<body>
+  <input class="js-input" onkeyup="input()">
+  <p class="js-output"></p>
+  <script>
+
+    function input() {
+      const inputElement = document.querySelector('.js-input');
+      let result = inputElement.value;
+
+      document.querySelector('.js-output').innerHTML = result;
+    }
+  </script>
+</body>
+
+</html>

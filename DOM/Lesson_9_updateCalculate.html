@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculator</title>
+</head>
+
+<body>
+  <p class="js-hide-calculate"></p>
+  <button onclick="
+      updateCalculate('1');
+  ">1</button>
+
+  <button onclick="
+    updateCalculate('2');
+  ">2</button>
+
+  <button onclick="
+    updateCalculate('3');
+  ">3</button>
+
+  <button onclick="
+    updateCalculate(' + ');
+  ">+</button>
+
+  <button onclick="
+    totalCalculator(calculator);
+  ">=</button>
+
+  <p>
+    <button onclick="
+      updateCalculate('4');     
+    ">4</button>
+
+    <button onclick="
+      updateCalculate('5');  
+    ">5</button>
+
+    <button onclick="
+      updateCalculate('6'); 
+    ">6</button>
+
+    <button onclick="
+      updateCalculate(' - ');
+    ">-</button>
+
+    <button onclick="
+      calculator = '';
+      displayCalculate();
+      localStorage.setItem('calculation', calculator);
+      
+    ">Reset</button>
+  </p>
+
+  <p>
+    <button onclick="
+      updateCalculate('7'); 
+    ">7</button>
+
+    <button onclick="
+      updateCalculate('8');
+    ">8</button>
+
+    <button onclick="
+      updateCalculate('9');
+    ">9</button>
+
+    <button onclick="
+      updateCalculate(' * ');
+    ">*</button>
+
+    <button onclick="
+      updateCalculate(' / ');
+    ">/</button>
+  </p>
+
+  <p>
+    <button onclick="
+      updateCalculate('0');
+    ">0</button>
+
+    <button onclick="
+      updateCalculate('.');
+    ">.</button>
+
+    <button onclick="
+      updateCalculate(' % ');
+    ">%</button>
+  </p>
+  <script>
+    let calculator = localStorage.getItem('calculation') || '';
+    displayCalculate();
+    function updateCalculate(value) {
+      calculator += value;
+      displayCalculate();
+      localStorage.setItem('calculation', calculator);
+
+    }
+
+    function totalCalculator(value) {
+      calculator = eval(calculator);
+      displayCalculate();
+      localStorage.setItem('calculation', calculator);
+
+    }
+
+    function displayCalculate() {
+      document.querySelector('.js-hide-calculate')
+        .innerHTML = calculator;
+    }
+  </script>
+</body>
+
+</html>
