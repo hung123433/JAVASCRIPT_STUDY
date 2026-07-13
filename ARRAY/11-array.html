@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ARRAY</title>
+  </head>
+
+  <body>
+    <script>
+      /*
+    const myArrays = [10, 20, 30];
+    console.log(myArrays);
+
+    console.log(myArrays[1]);
+    myArrays[0] = 99;
+    console.log(myArrays);
+    //kiểm tra mảng => đúng trả true, sai trả false
+    console.log(Array.isArray([1, 2]));
+
+    //kiểm tra độ dài của mảng <tên mảng>.length => trả về độ dài của mảng
+    console.log(myArrays.length);
+
+    //Thêm phần tử vào trong mảng: <Tên mảng>.push(<Phần tử cần thêm>)
+    myArrays.push(1999);
+    console.log(myArrays);
+
+    //Xoá phần tử trong mảng
+    //<tên mảng>.splice(<Chỉ sổ muốn xoá>, <Số lượng cần xoá>)
+    myArrays.splice(0, 2);
+    console.log(myArrays);
+    */
+
+      //Array
+      /*
+    let i = 1;
+    while (i <= 5) {
+      console.log(i);
+      i++;
+    }
+
+    for (let i = 1; i <= 5; i++) {
+      console.log(i);
+    }
+    */
+
+      /*
+    const toDoList = [
+      'make dinner',
+      'wash dinner',
+      'watch youtube'
+    ];
+
+    for (let index = 0; index <= toDoList.length - 1; index++) {
+      const value = toDoList[index];
+      console.log(value);
+    }
+    */
+
+      /*
+    const nums = [1, 1, 3];
+    let total = 0;
+    for (let i = 0; i < nums.length; i++) {
+      const num = nums[i];
+      total += num;
+    }
+    console.log(total);
+
+    const numDouble = [];
+    for (let i = 0; i < nums.length; i++) {
+      const num = nums[i];
+      numDouble.push(num * 2);
+    }
+    console.log(numDouble);
+
+  */
+
+      // const array1 = [1, 2, 3];
+      // const array2 = array1.slice();
+
+      // array2.push(4);
+      // console.log(array1);
+      // console.log(array2);
+
+      // const [firstValue, secondValue] = [1, 2, 3];
+
+      // for (let i = 1; i <= 10; i++) {
+      //   if (i % 3 === 0) {
+      //     continue;
+      //   }
+      //   console.log(i);
+      //   if (i === 8) {
+      //     break;
+      //   }
+      // }
+
+      let i = 0;
+      while (i <= 10) {
+        if (i % 3 === 0) {
+          i++;
+          continue;
+        }
+        console.log(i);
+        i++;
+      }
+
+      function doubleArray(nums) {
+        const numDouble = [];
+        for (let i = 0; i < nums.length; i++) {
+          const num = nums[i];
+          if (num === 0) {
+            return numDouble;
+          }
+          numDouble.push(num * 2);
+        }
+        return numDouble;
+      }
+      console.log(doubleArray([1, 1, 3]));
+      console.log(doubleArray([2, 2, 5, 0, 6]));
+    </script>
+  </body>
+</html>
